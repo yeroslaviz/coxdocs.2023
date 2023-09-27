@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yeroslaviz.github.io/coxdocs.2023/perseus_instructions.html</loc>
+    <lastmod>2023-09-27T14:09:51.640Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yeroslaviz.github.io/coxdocs.2023/andromeda_instructions.html</loc>
+    <lastmod>2023-09-27T14:09:51.632Z</lastmod>
+  </url>
+  <url>
     <loc>https://yeroslaviz.github.io/coxdocs.2023/index.html</loc>
-    <lastmod>2023-09-27T13:57:11.402Z</lastmod>
+    <lastmod>2023-09-27T14:09:51.640Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yeroslaviz.github.io/coxdocs.2023/maxquant_functions.html</loc>
+    <lastmod>2023-09-27T14:09:51.640Z</lastmod>
   </url>
 </urlset>
