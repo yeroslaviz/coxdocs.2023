@@ -1,0 +1,55 @@
+---
+title: "MaxQuant"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+---
+
+MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine [Andromeda](andromeda_instructions.html), which is integrated into MaxQuant as well as the [viewer](viewer_instructions.html) application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the [Perseus](perseus_instructions.html) framework.
+
+
+# Documentation outline
+
+  * [Download and installation](Download_Installation.html)
+  * [First steps in MaxQuant](MQ_FirstSteps.html)
+  * [Viewer](viewer_instructions.html)
+  * [[:maxquant:andromeda:start]]
+  * [[:maxquant:common:Google groups]]
+  * [[:maxquant:common:Bug reporting]]
+<ifauth @internal>
+These pages are only visible to internal users:
+  * [[:maxquant:common:internal:Glossary]]
+  * [[:maxquant:internal:FAQ]]
+  * [[:maxquant:internal:background]] (how it works under the hood)
+</ifauth>
+
+For additional training, consider attending the annual [MaxQuant Summer School](https://maxquant.org/summer_school/). Also watching some [MaxQuant videos](https://www.youtube.com/c/MaxQuantChannel) provides more insight.
+
+\\
+
+# Publications
+
+Cox, J. and Mann, M. [MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification.](http://www.nature.com/nbt/journal/v26/n12/full/nbt.1511.html) //Nat Biotechnol//, 2008, 26, pp 1367-72.
+\\ **Note that the paper has a large supplement containing in-depth descriptions of algorithms.**
+
+Cox, J., Michalski, A., and Mann, M., [Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors.](http://link.springer.com/article/10.1007%2Fs13361-011-0142-8) //J Am Soc Mass Spectrom.//, 2011, 22, pp 1373–1380. 
+
+Schaab C., Geiger T., Stoehr G., Cox J., and Mann M. [Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3316731/) //Mol Cell Proteomics//, 2012, 11, M111.014068. 
+
+Cox J., Hein M. Y., Luber C. A., Paron I., Nagaraj N., and Mann M., [|Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4159666/) //Mol Cell Proteomics//, 2014, 13, pp 2513–2526.
+
+Tyanova, S., Temu, T., Carlson, A., Sinitcyn, P., Mann, M. and Cox, J., [Visualization of LC-MS/MS proteomics data in MaxQuant](http://onlinelibrary.wiley.com/doi/10.1002/pmic.201400449/abstract), //Proteomics//, 2015, 15, pp 1453–1456
+
+Tyanova, S., Temu, T., and Cox, J., [The MaxQuant computational platform for mass spectrometry-based shotgun proteomics](https://www.nature.com/articles/nprot.2016.136), //Nat Protocols//, 2016, 11, pp 2301–2319
+\\ **Note that this paper explains how to run MaxQuant in detail.**
+
+-----
+
+[Contact](contact.html)
