@@ -26,5 +26,75 @@
     "title": "Perseus",
     "section": "",
     "text": "test this page"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "",
+    "section": "",
+    "text": "MaxQuant, Perseus, and related software packages are developed by the Computational Systems Biochemistry under Prof. Jürgen Cox.\nIf you need to contact the developers, you have a few options to proceed:\n\nIf you think something is misspelled or unclear in the documentation, consider changing it yourself (creating a pull request is quite easy).\nIf you have found a bug in the software or want to make a feature request, please create an issue on our github repository.\n\nIf you have a general usage question, ask it on the appropriate Google group.\n\nWe are also always on the lookout for promising canditates. In case you are interested in becoming a Master’s/PhD student or a postdoc, we encourage you to apply at all time via e-mail to Jürgen Cox.\nOr connect with us on GitHub, Twitter, or Linkedin (links in top right)."
+  },
+  {
+    "objectID": "viewer_gettingStarted.html",
+    "href": "viewer_gettingStarted.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "The Viewer module can either be used to get some prior information out of generated raw files or to find some follow up things after raw files have already been processed.\n\nRaw files prior processing\nTo view MS spectra of raw files, load the files using the Load or Load folder options.\n\n\n\n\n\nfasta file\n\n\n\n\n\n\nRaw files post processing with MaxQuant\nFile organization is important for the correct display of annotated spectra. Raw files should be in the same folder as all index files, the mqpar.xml file and all output folders created by MaxQuant during the processing (that includes the combined folder). The easiest way to load the entire data is to load the mqpar.xml file. Make sure that the file paths are correct if using this option.\n\n\n\n\n\nfasta file"
+  },
+  {
+    "objectID": "Download_Installation.html",
+    "href": "Download_Installation.html",
+    "title": "Download & Installation",
+    "section": "",
+    "text": "Downloading and using the software is free of charge.\nSimply download from here and unpack the compressed file //MaxQuant.zip//."
+  },
+  {
+    "objectID": "Download_Installation.html#maxquant-on-windows",
+    "href": "Download_Installation.html#maxquant-on-windows",
+    "title": "Download & Installation",
+    "section": "2.1 MaxQuant on Windows",
+    "text": "2.1 MaxQuant on Windows\nSupported operation system versions (64 bit is required) are Windows Vista, 7, 8, 10,11 or Server 2008, 2012, 2016, 2019\n\nInstall .NET Framework 4.7.3 or higher: To find out whether you already have it, follow the instructions on How to Determine Which .NET Framework Versions Are Installed. If you need to, you can download the software and get installation instructions at the Microsoft Download Center.\n\nWe are currently working on making MaxQuant compatible with .Net 6. This will be bring further advantages to speed and stability of the tool.\n\nRun MaxQuant GUI Double click on //MaxQuant.exe// in //MaxQuant// folder and specify your RAW files, experimental design and fasta files.\nStart MaxQuant Click on the //Start// button."
+  },
+  {
+    "objectID": "Download_Installation.html#maxquant-on-linux",
+    "href": "Download_Installation.html#maxquant-on-linux",
+    "title": "Download & Installation",
+    "section": "2.2 MaxQuant on Linux",
+    "text": "2.2 MaxQuant on Linux\nWe are supporting MaxQuant on Ubuntu 16 or higher, but MaxQuant should also work on another distribution of Linux. You may run MaxQuant using Graphical User Interface. In this case, you should install Mono and follow instructions for //MaxQuant on Windows// starting from second point. This tutorial is focused on running MaxQuant using command line.\n\nInstall .NET Core 3.1 \\ To find out whether you already have it, type in the command line\n\ndotnet --version\nIf you see at least the version //3.1.100//, then everything is ready to start MaxQuant.\nOtherwise you need to get installation instructions at the .NET Core SDK 3.1 for your operation system.\nUbuntu 22.04 (for example)\nwget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\nsudo dpkg -i packages-microsoft-prod.deb\nsudo apt-get update; \\\nsudo apt-get install -y apt-transport-https && \\\nsudo apt-get update && \\\nsudo apt-get install -y dotnet-sdk-2.1\n\nEdit //mqpar.xml// file Currently we highly recommend to preconfigure the //mqpar.xml// file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.\n\ndotnet MaxQuant/bin/MaxQuantCmd.exe --changeFolder=new_mqpar.xml &lt;new folder with fasta files&gt; &lt;new folder with raw files&gt; old_mqpar.xml\nHowever if you feel familiar with a structure of mqpar.xml, you may create a template of mqpar.xml and edit it directly.\ndotnet MaxQuant/bin/MaxQuantCmd.exe --create new_mqpar.xml\n\nRun MaxQuant\n\ndotnet MaxQuant/bin/MaxQuantCmd.exe mqpar.xml"
+  },
+  {
+    "objectID": "user_intereface.html",
+    "href": "user_intereface.html",
+    "title": "User Interface",
+    "section": "",
+    "text": "The user interface of the Viewer, which is packed with MaxQuant is located at the “Viewer” tab of the MaxQuant software (highlighted by a red rectangle). The title bar along the top has the MaxQuant logo on the left, followed by an icon that can be used to rename the session, which will be displayed and is by default Session 1 - MaxQuant - name of the currently displayed raw file. The ribbon of the “Viewer” tab contains three groups of functions: the Map controls (highlighted by a petrol blue rectangle), the Feature controls (highlighted by a yellow rectangle) and the Table navigation (highlighted by a red-brown rectangle). The functionalities of all buttons within each category can be obtained from their tooltips.\n\n\n\n\n\nfasta file\n\n\n\n\nThe Viewer window is split into four different areas: the map view, the MS-feature view, the table view and the protein view. Each view can be manipulated with the corresponding buttons. The left window with the map view and the MS-feature view can be either split horizontally or vertically by the button highlighted by the blue rectangle (screenshot above).\n\n\n\n\n\nfasta file"
+  },
+  {
+    "objectID": "viewer_instructions.html",
+    "href": "viewer_instructions.html",
+    "title": "Viewer",
+    "section": "",
+    "text": "Modern software platforms enable the analysis of shotgun proteomics data in an automated fashion resulting in high quality identification and quantification results. Additional understanding of the underlying data can be gained with the help of advanced visualization tools that allow for easy navigation through large LC-MS/MS datasets potentially consisting of terabytes of raw data. The updated MaxQuant version has a map navigation component that steers the users through mass and retention time-dependent mass spectrometric signals. It can be used to monitor a peptide feature used in label-free quantification over many LC-MS runs and visualize it with advanced 3D graphic models. An expert annotation system aids the interpretation of the MS/MS spectra used for the identification of these peptide features.\nTo run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you use Windows you should have Windows 10 or newer.\n\\\n\nDocumentation outline\n\nDownload and installation\nUser interface\nGetting started\nTutorial\nTrouble shooting\n[[maxquant::common:Google groups]]\n[[maxquant::common:Bug reporting]]\n\n\n[[maxquant:common:internal:Glossary]]\n\nYou can find raw files and processed data to test the Viewer (v. 1.5.2.8) |here. \\ Important note: If you load the mqpar.xml file, make sure all file paths are correct! If needed, update them using the “Change folder” option.\nFor additional training, consider attending the annual |MaxQuant Summer School. Also watching some MaxQuant videos on our video channel provides more insight.\n\\\n==== Publications ==== Tyanova, S., Temu, T., Carlson, A., Sinitcyn, P., Mann, M. and Cox, J., [[http://onlinelibrary.wiley.com/doi/10.1002/pmic.201400449/abstract|Visualization of LC-MS/MS proteomics data in MaxQuant]], //Proteomics//, 2015, 15, pp 1453–1456"
+  },
+  {
+    "objectID": "MQ_FirstSteps.html",
+    "href": "MQ_FirstSteps.html",
+    "title": "First steps with MaxQuant",
+    "section": "",
+    "text": "The descriptions and screenshots in this tutorial refer to the MaxQuant GUI around version 1.4.3.14 from August 2014.\nIn case you are a first time user you might be worried by the many options and parameters that one can set in the user interface. In that case we have good news for you. In almost all use cases the standard values of most parameters are fine and you only need to adjust a small number of factors. Typically there is only little information that you need to provide. Every parameter in the interface has context help which you obtain by hovering with the mouse pointer over the text string for this parameter. This documentation also has that information, and more.\nYou will have to tell MaxQuant where to find your raw data files and your fasta files, and which labels and digestion enymes you are using. 90% of the time that will be enough, and you can leave the rest of the bells and whistles on their default values. Of course, we are assuming you have successfully installed and started MaxQuant, and that you can find the Start button once you have finished entering the processing parameters (hint: look in the lower left corner of the GUI). Here is more detail on how to enter those four most important parameters:\n\nRaw data: Along the top of the GUI are six tabs. The first of these is Raw files. Select that tab, then click “Load” to open a browser where you can select the file containing your raw data. You can select any number of files. You can also select all the raw data files in a single folder by using the “Load folder” button. In the screen shot, two files have been loaded. (If you still have questions, there is a page that goes into details about the Raw Files tab)\n\n\n\n\n\n\nraw file tab\n\n\n\n\n\nLabels: The second tab is Group-specific parameters. You need to go there to specify your labels. The “Type” will usually be “Standard” (obviously), and the “Multiplicity” will be 1 for label-free quantification, 2 if you have light and heavy labels, and 3 if you have light, medium, and heavy. Any number of labels can be checked in the lists. In this example, the light sample is unlabeled and the heavy sample has been labeled with Arg10 and Lys8. (You can’t see them both without scrolling.)\n\n\n\n\n\n\nGroup-specific parameters\n\n\n\n\n\nEnzymes: Also under the Group-specific parameters tab, you should enter the “Enzyme” (one or more) with which you have digested your proteins. They can be moved from the list at the left and back with the arrow buttons, and the order changed with the “t” (to top), “u” (up one place), “d” (down one place), and “b” (to bottom) buttons. In this example, we used Trypsin/P.\n\n\n\n\n\n\nenzymes\n\n\n\n\n\nFASTA: Finally you will need to go to the third tab, “Global parameters” to specify where to find the “Fasta files” (one or more) you want to use. The “Add file” button will open a file browser.\n\n\n\n\n\n\nfasta file\n\n\n\n\nAfter you press the “Start” button, you can monitor the progress of the analysis under the fourth tab, Performance. A popup window saying ‘Done’ will appear when MaxQuant is finished. All result files will appear in the folder …\\combined\\txt as tab-delimited text files. A pdf document with a description of all columns in all tables will be written to …\\combined\\txt\\tables.pdf.\nThe fifth tab is the Viewer, used to examine the results of the analysis, which will be the topic of the viewer tutorial. All columns have interactive descriptions in the Viewer program. Just move the mouse over the beginning of the column title and click on the question mark that will appear.\nThe sixth and final tab is Andromeda configuration. Andromeda is the peptide search engine, which needs to know what modifications, proteases, and sequence databases to take into consideration. Almost all that you will ever need are pre-configured, but you can use the buttons under this tab to add more, if your experiment requires it.\nThat’s how easy it can be!"
+  },
+  {
+    "objectID": "viewer_tutorials.html",
+    "href": "viewer_tutorials.html",
+    "title": "Viewer Tutorials",
+    "section": "",
+    "text": "Tutorials Vidos to embed here!"
+  },
+  {
+    "objectID": "troubleshooting.html",
+    "href": "troubleshooting.html",
+    "title": "Trouble Shooting",
+    "section": "",
+    "text": "Q: Cannot load raw files\nA: Check if .NET and MSFileReader are installed on your computer\n\nQ: “MSFileReader appears not to be installed” error message\nA: If the software has been successfully installed, but this error message appears, try to uninstall and then re-install the MSFileReader again. Restarting the computer may also be necessary\n\nQ: No spectra are displayed\nA: Check the “Exists” status in the Viewer for each file – if it is false, the location of the raw files has changed and has to be updated. Select all files for which the location has to be updated and use “Change folder” to navigate to the correct location\n\nQ: The MS Feature View is either empty or does not display updated information\nA: Use the refresh button the Feature Controls section\n\nQ: No MaxQuant identifications are loaded\n\nA1: Make sure the raw files are in the same folder as all index files, the mqpar.xml file and all output folders created by MaxQuant during the processing.\nA2: Make sure you are using the same MaxQuant version that was used for processing the raw data\n\nQ: I have a problem that is not listed here\nA: Try asking on one of our google groups\n\nQ: I want to report a bug\nA: Use our bugs tracking system"
   }
 ]

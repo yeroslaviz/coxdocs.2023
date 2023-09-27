@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Assa Yeroslaviz">
+<meta name="author" content="AY">
 <meta name="dcterms.date" content="2023-09-27">
 
-<title>Cox Docs</title>
+<title>Trouble Shooting</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Trouble Shooting</h1>
 </div>
 
 
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p><a href="https://github.com/yeroslaviz">Assa Yeroslaviz</a> </p>
+             <p>AY </p>
           </div>
   </div>
     
@@ -173,13 +173,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p><strong>Q:</strong> Cannot load raw files</p>
+<p><strong>A:</strong> Check if <a href="Download_Installation.html">.NET</a> and MSFileReader are installed on your computer</p>
 <hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
-<ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
-</ul>
+<p><strong>Q:</strong> “MSFileReader appears not to be installed” error message</p>
+<p><strong>A:</strong> If the software has been successfully installed, but this error message appears, try to uninstall and then re-install the MSFileReader again. Restarting the computer may also be necessary</p>
+<hr>
+<p><strong>Q:</strong> No spectra are displayed</p>
+<p><strong>A:</strong> Check the “Exists” status in the Viewer for each file – if it is false, the location of the raw files has changed and has to be updated. Select all files for which the location has to be updated and use “Change folder” to navigate to the correct location</p>
+<hr>
+<p><strong>Q:</strong> The MS Feature View is either empty or does not display updated information</p>
+<p><strong>A:</strong> Use the refresh button the Feature Controls section</p>
+<hr>
+<p><strong>Q:</strong> No MaxQuant identifications are loaded</p>
+<hr>
+<p><strong>A1:</strong> Make sure the raw files are in the same folder as all index files, the mqpar.xml file and all output folders created by MaxQuant during the processing.</p>
+<p><strong>A2:</strong> Make sure you are using the same MaxQuant version that was used for processing the raw data</p>
+<hr>
+<p><strong>Q:</strong> I have a problem that is not listed here</p>
+<p><strong>A:</strong> Try asking on one of our <a href="https://maxquant.org/community/">google groups</a></p>
+<hr>
+<p><strong>Q:</strong> I want to report a bug</p>
+<p><strong>A:</strong> Use our <a href="https://github.com/cox-labs/CoxLab_Bug_Reporting">bugs tracking system</a></p>
 
 
 

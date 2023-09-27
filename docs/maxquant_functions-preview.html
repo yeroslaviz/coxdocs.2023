@@ -1,30 +1,116 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.4.294">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.294">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Assa Yeroslaviz">
-<meta name="dcterms.date" content="2023-09-27">
-
-<title>Cox Docs</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
+    <title>MaxQuant</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = '/';
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -41,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+     <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,15 +151,20 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
+}</script>  
+        <link rel="stylesheet" href="styles.css">
+      </head>
 
+  <body class="floating nav-fixed quarto-notebook">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link"><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> MaxQuant</h6>
 
-<link rel="stylesheet" href="styles.css">
-</head>
+            <a href="./maxquant_functions.qmd" class="btn btn-primary quarto-download-embed" download="maxquant_functions.qmd">Download Source</a>
+          </div>
 
-<body class="nav-fixed">
-
-<div id="quarto-search-results"></div>
+     <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
@@ -89,11 +180,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maxquant_functions.html" rel="" target="">
+    <a class="nav-link active" href="./maxquant_functions.html" rel="" target="" aria-current="page">
  <span class="menu-text">MaxQuant</span></a>
   </li>  
   <li class="nav-item">
@@ -136,55 +227,65 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">MaxQuant</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://github.com/yeroslaviz">Assa Yeroslaviz</a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 27, 2023</p>
-    </div>
-  </div>
   
     
   </div>
   
 
 
-</header>
-
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+</header>   <div id="c7478662-229f-4439-b900-3f3087a8de7f" class="cell markdown">
+<p><a href="https://github.com/yeroslaviz">Assa Yeroslaviz</a><br>
+2023-09-27</p>
+<p>MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine <a href="andromeda_instructions.html">Andromeda</a>, which is integrated into MaxQuant as well as the <a href="viewer_instructions.html">viewer</a> application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the <a href="perseus_instructions.html">Perseus</a> framework.</p>
+<section id="documentation-outline" class="level1">
+<h1>Documentation outline</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><a href="Download_Installation.html">Download and installation</a></li>
+<li><a href="MQ_FirstSteps.html">First steps in MaxQuant</a></li>
+<li><a href="viewer_instructions.html">Viewer</a></li>
+<li>[[:maxquant:andromeda:start]]</li>
+<li>[[:maxquant:common:Google groups]]</li>
+<li>[[:maxquant:common:Bug reporting]] &lt;ifauth <span class="citation" data-cites="internal">@internal</span>&gt; These pages are only visible to internal users:</li>
+<li>[[:maxquant:common:internal:Glossary]]</li>
+<li>[[:maxquant:internal:FAQ]]</li>
+<li>[[:maxquant:internal:background]] (how it works under the hood) </li>
 </ul>
+<p>For additional training, consider attending the annual <a href="https://maxquant.org/summer_school/">MaxQuant Summer School</a>. Also watching some <a href="https://www.youtube.com/c/MaxQuantChannel">MaxQuant videos</a> provides more insight.</p>
+<p>\</p>
+</section>
+<section id="publications" class="level1">
+<h1>Publications</h1>
+<p>Cox, J. and Mann, M. <a href="http://www.nature.com/nbt/journal/v26/n12/full/nbt.1511.html">MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification.</a> //Nat Biotechnol//, 2008, 26, pp 1367-72. \ <strong>Note that the paper has a large supplement containing in-depth descriptions of algorithms.</strong></p>
+<p>Cox, J., Michalski, A., and Mann, M., <a href="http://link.springer.com/article/10.1007%2Fs13361-011-0142-8">Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors.</a> //J Am Soc Mass Spectrom.//, 2011, 22, pp 1373–1380.</p>
+<p>Schaab C., Geiger T., Stoehr G., Cox J., and Mann M. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3316731/">Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database.</a> //Mol Cell Proteomics//, 2012, 11, M111.014068.</p>
+<p>Cox J., Hein M. Y., Luber C. A., Paron I., Nagaraj N., and Mann M., <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4159666/">|Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ.</a> //Mol Cell Proteomics//, 2014, 13, pp 2513–2526.</p>
+<p>Tyanova, S., Temu, T., Carlson, A., Sinitcyn, P., Mann, M. and Cox, J., <a href="http://onlinelibrary.wiley.com/doi/10.1002/pmic.201400449/abstract">Visualization of LC-MS/MS proteomics data in MaxQuant</a>, //Proteomics//, 2015, 15, pp 1453–1456</p>
+<p>Tyanova, S., Temu, T., and Cox, J., <a href="https://www.nature.com/articles/nprot.2016.136">The MaxQuant computational platform for mass spectrometry-based shotgun proteomics</a>, //Nat Protocols//, 2016, 11, pp 2301–2319 \ <strong>Note that this paper explains how to run MaxQuant in detail.</strong></p>
+<hr>
+<p><a href="contact.html">Contact</a></p>
+</section>
+</div>
 
 
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+     </main> <!-- /main -->  <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -500,8 +601,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-</div> <!-- /content -->
+</script>  </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -514,9 +614,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
   </div>
-</footer>
-
-
-
-
+</footer> 
+  
 </body></html>

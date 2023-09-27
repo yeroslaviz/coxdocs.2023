@@ -1,0 +1,53 @@
+---
+title: "Viewer"
+author: "AY"
+date: "`r format(Sys.Date())`"
+output:
+  html_document:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+    toc_depth: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+---
+
+Modern software platforms enable the analysis of shotgun proteomics data in an automated fashion resulting in high quality identification and quantification results. Additional understanding of the underlying data can be gained with the help of advanced visualization tools that allow for easy navigation through large LC-MS/MS datasets potentially consisting of terabytes of raw data. The updated [MaxQuant](index.html) version has a map navigation component that steers the users through mass and retention time-dependent mass spectrometric signals. It can be used to monitor a peptide feature used in label-free quantification over many LC-MS runs and visualize it with advanced 3D graphic models. An expert annotation system aids the interpretation of the MS/MS spectra used for the identification of these peptide features.
+
+To run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you use Windows you should have Windows 10 or newer.
+
+\\
+
+# Documentation outline
+
+  * [Download and installation](Download_Installation.html)
+  * [User interface](user_intereface.html)
+  * [Getting started](viewer_gettingStarted.html)
+  * [Tutorial](viewer_tutorials.html)
+  * [Trouble shooting](troubleshooting.html)
+  * [[maxquant::common:Google groups]]
+  * [[maxquant::common:Bug reporting]]
+  
+\newline
+\newline
+  
+  
+  * [[maxquant:common:internal:Glossary]]
+
+You can find raw files and processed data to test the Viewer (v. 1.5.2.8) [|here](https://datashare.biochem.mpg.de/s/nOJZoCv8Y4FZMQH).
+\\
+ **Important note:** If you load the `mqpar.xml` file, make sure all file paths are correct! If needed, update them using the "Change folder" option.
+
+For additional training, consider attending the annual [|MaxQuant Summer School](https://maxquant.org/summer_school/). Also watching some [MaxQuant videos](http://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO8w) on our video channel provides more insight.
+
+\\
+
+==== Publications ====
+Tyanova, S., Temu, T., Carlson, A., Sinitcyn, P., Mann, M. and Cox, J., [[http://onlinelibrary.wiley.com/doi/10.1002/pmic.201400449/abstract|Visualization of LC-MS/MS proteomics data in MaxQuant]], //Proteomics//, 2015, 15, pp 1453–1456
+
+
+
+
+
+

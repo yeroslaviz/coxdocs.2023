@@ -1,5 +1,5 @@
 ---
-title: "Cox Docs"
+title: "Andromeda"
 author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
 format: 
   html:
@@ -10,14 +10,7 @@ format:
     number-depth: 4
 editor: visual
 date: today
-
 ---
 
-----
 
-
-Welcome to coxdocs.org, the home of the documentation for
-
-* [MaxQuant](maxquant_instructions.html)
-* [Perseus](perseus_instructions.html)
-* [Andromeda](andromeda_instructions.html)
+test this page
