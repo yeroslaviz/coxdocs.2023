@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="AY">
-<meta name="dcterms.date" content="2023-09-27">
+<meta name="author" content="Assa Yeroslaviz">
+<meta name="dcterms.date" content="2023-09-28">
 
 <title>First steps with MaxQuant</title>
 <style>
@@ -67,6 +67,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -138,7 +140,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#entering-raw-data" id="toc-entering-raw-data" class="nav-link active" data-scroll-target="#entering-raw-data"><span class="header-section-number">1</span> Entering Raw data</a></li>
+  <li><a href="#the-labels" id="toc-the-labels" class="nav-link" data-scroll-target="#the-labels"><span class="header-section-number">2</span> The Labels</a></li>
+  <li><a href="#enzymes" id="toc-enzymes" class="nav-link" data-scroll-target="#enzymes"><span class="header-section-number">3</span> Enzymes</a></li>
+  <li><a href="#load-fasta-file" id="toc-load-fasta-file" class="nav-link" data-scroll-target="#load-fasta-file"><span class="header-section-number">4</span> Load FASTA file</a></li>
+  <li><a href="#start-the-analysis" id="toc-start-the-analysis" class="nav-link" data-scroll-target="#start-the-analysis"><span class="header-section-number">5</span> Start the Analysis</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -155,14 +167,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>AY </p>
+             <p><a href="https://github.com/yeroslaviz">Assa Yeroslaviz</a> </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 27, 2023</p>
+      <p class="date">September 28, 2023</p>
     </div>
   </div>
   
@@ -174,66 +186,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><em>The descriptions and screenshots in this tutorial refer to the MaxQuant GUI around version 1.4.3.14 from August 2014.</em></p>
-<p>In case you are a first time user you might be worried by the many options and parameters that one can set in the user interface. In that case we have good news for you. In almost all use cases the standard values of most parameters are fine and you only need to adjust a small number of factors. Typically there is only little information that you need to provide. Every parameter in the interface has context help which you obtain by hovering with the mouse pointer over the text string for this parameter. This documentation also has that information, and more.</p>
-<p>You will have to tell MaxQuant where to find your raw data files and your fasta files, and which labels and digestion enymes you are using. 90% of the time that will be enough, and you can leave the rest of the bells and whistles on their default values. Of course, we are assuming you have successfully <a href="Download_Installation.html">installed and started</a> MaxQuant, and that you can find the <strong>Start</strong> button once you have finished entering the processing parameters (hint: look in the lower left corner of the GUI). Here is more detail on how to enter those four most important parameters:</p>
-<ul>
-<li><strong>Raw data:</strong> Along the top of the GUI are six tabs. The first of these is <strong>Raw files</strong>. Select that tab, then click “Load” to open a browser where you can select the file containing your raw data. You can select any number of files. You can also select all the raw data files in a single folder by using the “Load folder” button. In the screen shot, two files have been loaded. (If you still have questions, there is a page that goes into details about the <a href="rawFilesTab.html">Raw Files tab</a>)</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<p>In case you are a first time user, you might be worried by the many options and parameters that one can set in the user interface. If this is the case, we have good news for you. In almost all user cases the standard values of most parameters are fine and you only need to adjust a small number of factors. Typically there is only little information that you need to provide. Every parameter in the interface has context help which you obtain by hovering with the mouse pointer over the text string for this parameter. This documentation also has that information, and more.</p>
+<p>You will have to tell <code>MaxQuant</code> where to find your raw data files and your fasta files, and which labels and digestion enzymes you are using. 90% of the time that will be enough, and you can leave the rest of the bells and whistles on their default values. Of course, we are assuming you have successfully <a href="Download_Installation.html">installed and started</a> <code>MaxQuant</code>, and that you can find the <strong>Start</strong> button once you have finished entering the processing parameters (hint: <em>look in the lower left corner of the GUI</em>). Below are more details on how to enter those four most important parameters:</p>
+<section id="entering-raw-data" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="entering-raw-data"><span class="header-section-number">1</span> Entering Raw data</h2>
+<p>Along the top of the GUI there are six tabs. The first of these is <strong>Raw files</strong>. Select that tab, then click “Load” to open a browser where you can select the file containing your raw data. You can select any number of files. You can also select all the raw data files in a single folder by using the “Load folder” button (s. <a href="#fig-raw-files" class="quarto-xref">Figure&nbsp;1</a>). In the screen shot, two files have been loaded. (If you still have questions, there is a page that goes into details about the <a href="rawFilesTab.html">Raw Files tab</a>)</p>
+<div id="fig-raw-files" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Figures/rawFiles.png" class="img-fluid figure-img" width="550"></p>
-<figcaption class="figure-caption">raw file tab</figcaption>
+<p><img src="Figures/rawFiles.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: raw Files</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<ul>
-<li><strong>Labels:</strong> The second tab is <strong>Group-specific parameters</strong>. You need to go there to specify your labels. The “Type” will usually be “Standard” (obviously), and the “Multiplicity” will be 1 for label-free quantification, 2 if you have light and heavy labels, and 3 if you have light, medium, and heavy. Any number of labels can be checked in the lists. In this example, the light sample is unlabeled and the heavy sample has been labeled with Arg10 and Lys8. (You can’t see them both without scrolling.)</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+</section>
+<section id="the-labels" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="the-labels"><span class="header-section-number">2</span> The Labels</h2>
+<p>The second tab is <strong>Group-specific parameters</strong>. You need to go there to specify your labels. The “Type” will usually be “Standard” (obviously), and the “Multiplicity” will be <span class="math inline">\(1\)</span> for label-free quantification, <span class="math inline">\(2\)</span> if you have light and heavy labels, and <span class="math inline">\(3\)</span> if you have light, medium, and heavy. Any number of labels can be checked in the lists. In this example, the light sample is unlabeled and the heavy sample has been labeled with Arg10 and Lys8. (You can’t see them both without scrolling. <a href="#fig-load-labels" class="quarto-xref">Figure&nbsp;2</a>)</p>
+<div id="fig-load-labels" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Figures/labels.png" class="img-fluid figure-img" width="550"></p>
-<figcaption class="figure-caption">Group-specific parameters</figcaption>
+<p><img src="Figures/labels.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Group-specific parameters</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<ul>
-<li><strong>Enzymes:</strong> Also under the <strong>Group-specific parameters</strong> tab, you should enter the “Enzyme” (one or more) with which you have digested your proteins. They can be moved from the list at the left and back with the arrow buttons, and the order changed with the “t” (to top), “u” (up one place), “d” (down one place), and “b” (to bottom) buttons. In this example, we used Trypsin/P.</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+</section>
+<section id="enzymes" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="enzymes"><span class="header-section-number">3</span> Enzymes</h2>
+<p>Also under the <strong>Group-specific parameters</strong> tab, you should enter the <code>Enzyme(s)</code> (one or more) with which you have digested your proteins. They can be moved from the list at the left and back with the arrow buttons, and the order changed with the “t” (to top), “u” (up one place), “d” (down one place), and “b” (to bottom) buttons. In this example (s. <a href="#fig-enzymes" class="quarto-xref">Figure&nbsp;3</a>), we used Trypsin/P.</p>
+<div id="fig-enzymes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Figures/digestion.png" class="img-fluid figure-img" width="550"></p>
-<figcaption class="figure-caption">enzymes</figcaption>
+<p><img src="Figures/digestion.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Enzymes</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<ul>
-<li><strong>FASTA:</strong> Finally you will need to go to the third tab, “Global parameters” to specify where to find the “Fasta files” (one or more) you want to use. The “Add file” button will open a file browser.</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+</section>
+<section id="load-fasta-file" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="load-fasta-file"><span class="header-section-number">4</span> Load FASTA file</h2>
+<p>Finally you will need to go to the third tab (s. <a href="#fig-fasta" class="quarto-xref">Figure&nbsp;4</a>), “Global parameters” to specify where to find the <code>Fasta files</code> (one or more) you want to use. The <strong>Add file</strong> button will open a file browser.</p>
+<div id="fig-fasta" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Figures/fasta.png" class="img-fluid figure-img" width="550"></p>
-<figcaption class="figure-caption">fasta file</figcaption>
+<p><img src="Figures/fasta.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: fasta files</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<p>After you press the “Start” button, you can monitor the progress of the analysis under the fourth tab, <strong>Performance</strong>. A popup window saying ‘Done’ will appear when MaxQuant is finished. All result files will appear in the folder <code>…\combined\txt</code> as tab-delimited text files. A pdf document with a description of all columns in all tables will be written to <code>…\combined\txt\tables.pdf</code>.</p>
+</section>
+<section id="start-the-analysis" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="start-the-analysis"><span class="header-section-number">5</span> Start the Analysis</h2>
+<p>After you press the <strong>Start</strong> button, you can monitor the progress of the analysis under the fourth tab, <strong>Performance</strong>. A popup window saying ‘Done’ will appear when MaxQuant is finished. All result files will appear in the folder <code>…\combined\txt</code> as tab-delimited text files. A pdf document with a description of all columns in all tables will be written to <code>…\combined\txt\tables.pdf</code>.</p>
 <p>The fifth tab is the <strong>Viewer</strong>, used to examine the results of the analysis, which will be the topic of the <a href="viewer_tutorials.html">viewer tutorial</a>. All columns have interactive descriptions in the Viewer program. Just move the mouse over the beginning of the column title and click on the question mark that will appear.</p>
 <p>The sixth and final tab is <strong>Andromeda configuration</strong>. Andromeda is the peptide search engine, which needs to know what modifications, proteases, and sequence databases to take into consideration. Almost all that you will ever need are pre-configured, but you can use the buttons under this tab to add more, if your experiment requires it.</p>
 <p>That’s how easy it can be!</p>
+<hr>
+<p>For question or problems with the running MqxQuant we would love to hear from you under <a href="contact.html">Contact</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

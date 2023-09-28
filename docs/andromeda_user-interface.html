@@ -9,7 +9,7 @@
 <meta name="author" content="Assa Yeroslaviz">
 <meta name="dcterms.date" content="2023-09-28">
 
-<title>Andromeda Start</title>
+<title>Andromeda User Interface</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Perseus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./andromeda_instructions.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
  <span class="menu-text">Andromeda</span></a>
   </li>  
 </ul>
@@ -138,11 +138,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#documentation-outline" id="toc-documentation-outline" class="nav-link active" data-scroll-target="#documentation-outline"><span class="header-section-number">1</span> Documentation outline</a></li>
+  <li><a href="#andromeda-within-maxquant" id="toc-andromeda-within-maxquant" class="nav-link active" data-scroll-target="#andromeda-within-maxquant"><span class="header-section-number">1</span> Andromeda within MaxQuant</a></li>
+  <li><a href="#stand-alone-andromeda" id="toc-stand-alone-andromeda" class="nav-link" data-scroll-target="#stand-alone-andromeda"><span class="header-section-number">2</span> Stand-alone Andromeda</a>
+  <ul>
+  <li><a href="#andromeda-with-gui" id="toc-andromeda-with-gui" class="nav-link" data-scroll-target="#andromeda-with-gui"><span class="header-section-number">2.1</span> Andromeda with GUI</a></li>
+  <li><a href="#andromeda-as-command-line-tool" id="toc-andromeda-as-command-line-tool" class="nav-link" data-scroll-target="#andromeda-as-command-line-tool"><span class="header-section-number">2.2</span> Andromeda as command line tool</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Andromeda Start</h1>
+<h1 class="title">Andromeda User Interface</h1>
 </div>
 
 
@@ -179,27 +184,55 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Andromeda is a peptide search engine based on probabilistic scoring. On proteome data, Andromeda performs as well as Mascot, a widely used commercial search engine, as judged by sensitivity and specificity analysis based on target decoy searches.</p>
-<p>It can handle data with arbitrarily high fragment mass accuracy, it is also able to assign and score complex patterns of post-translational modifications, such as highly phosphorylated peptides, and accommodates extremely large databases. Andromeda can function independently or integrated into MaxQuant. This combination enables analysis of large datasets on a desktop computer. Identification of co-fragmented peptides improves the number of identified peptides.</p>
-<p>To run Andromeda, you will need .NET framework 4.5.</p>
-<section id="documentation-outline" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Documentation outline</h1>
-<p>This documentation is organized as a wiki, so if you find anything that is wrong or hard to understand, please <a href="contact.html">let us know</a>. The wiki can be browsed by using the links below or by searching with the magnifying glass in the upper right corner.</p>
+<p>There are two way to run Andromeda, within the MaxQuant or as a stand-alone tool.</p>
+<section id="andromeda-within-maxquant" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Andromeda within MaxQuant</h1>
+<p>The user interface of the Andromeda search engine (s. <a href="#fig-andromedaUI" class="quarto-xref">Figure&nbsp;1</a>) packaged with MaxQuant is located at the last tab of the MaxQuant software (highlighted by a red rectangle). The title bar along the top has the MaxQuant logo on the left, followed by an icon that can be used to rename the session, which will be displayed and is by default “Session 1 - MaxQuant”. The ribbon of the “Andromeda configuration” tab contains three groups of functions: the <strong>Data type</strong> (highlighted by a green rectangle), the <strong>Table actions</strong> (highlighted by a blue rectangle) and the <strong>Actions</strong> (highlighted by a orange rectangle).</p>
+<div id="fig-andromedaUI" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/andromeda_maxquant_ui.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Andromeda User Interface within MaxQuant</figcaption>
+</figure>
+</div>
 <ul>
-<li><a href="maxquant_instructions.html">maxquant - Download and installation</a></li>
-<li><a href="andromeda_user-interface.html">Andromeda User Interface</a></li>
-<li><a href="andromeda_configurations.html">Andromeda Configuration:</a></li>
-<li><a href="andromeda_tutorial.html">Andromeda Tutorial</a></li>
-<li><a href="https://groups.google.com/g/maxquant-list?pli=1">Google groups</a></li>
-<li><a href="https://github.com/cox-labs/CoxLab_Bug_Reporting">maxquant Bug reporting</a></li>
-<li><a href="Glossary.html">Glossary</a></li>
+<li>The <strong>Data type</strong> is the category you are interested in, either to look up some configurations or to add, remove or modify the list of items of that category.</li>
+<li><strong>Table actions</strong> contain all the functions that can be applied to a table of chosen Data type.</li>
+<li><strong>Actions</strong> are the functions that are applied to all tables.</li>
 </ul>
-<p>You can find raw file format examples to test Andromeda [[http://andromeda-search.org/AndromedaExample.zip|here]].</p>
-<p>For additional training, consider attending the annual [[https://maxquant.org/summer_school/|MaxQuant Summer School]]. Also watching some [[http://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO 8w|MaxQuant videos]] provides more insight.</p>
-<p>\</p>
-<p>==== Publications ==== Cox, J., Neuhauser, N., Michalski, A., Scheltema, R. A., Olsen, J. V., and Mann, M., [[http://pubs.acs.org/doi/abs/10.1021/pr101065j|Andromeda: A Peptide Search Engine Integrated into the MaxQuant Environment]], //J. Proteome Res.//, 2011, 10, 1794–1805</p>
+<p>The window below the ribbon is split into two, where the left hand side contains the list of all modifications, proteases or sequence databases depending on the chosen Data type. The right hand side contains the information of one selected row of the left window by clicking on it.</p>
+<p>In the bottom right corner of the MaxQuant window are a progress bar and the version number.</p>
+</section>
+<section id="stand-alone-andromeda" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Stand-alone Andromeda</h1>
+<p>Andromeda’s stand-alone version can either be used with a user interface or as a command line tool.</p>
+<section id="andromeda-with-gui" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="andromeda-with-gui"><span class="header-section-number">2.1</span> Andromeda with GUI</h2>
+<p>The user interface of the Andromeda stand-alone version has the MaxQuant logo on the top left. The functionality buttons can be found on the right (highlighted green rectangle in <a href="#fig-andromeda-sa" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<p>Loading “Source Files” is possible with the “Browse” button. The corresponding “Parameter Files” can be loaded by clicking on the source files and using the “Select .apar” button. It can also be defined, whether a protein summary should be reported, whether the results should have a minimal score and how many threads should be used for the calculation.</p>
+<div id="fig-andromeda-sa" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/user_interface-standalone-gui-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Andromeda User Interface standalone</figcaption>
+</figure>
+</div>
+</section>
+<section id="andromeda-as-command-line-tool" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="andromeda-as-command-line-tool"><span class="header-section-number">2.2</span> Andromeda as command line tool</h2>
+<p>To figure out how to specify the parameters in the command line tool, follow the steps below:</p>
+<ul>
+<li>Open a <code>cmd</code></li>
+<li>Go to the unziped Andromeda folder</li>
+<li>Run the executable <code>AndromedaCmd.exe</code> without parameters (highlighted by a cyan rectangle in <a href="#fig-andromeda-cmd" class="quarto-xref">Figure&nbsp;3</a>) to figure out the Andromeda settings (highlighted by a red rectangle in <a href="#fig-andromeda-cmd" class="quarto-xref">Figure&nbsp;3</a>).</li>
+</ul>
+<div id="fig-andromeda-cmd" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/user_interface-standalone-cmd-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Andromeda User Interface standalone</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,0 +1,15 @@
+---
+title: "andromeda Configurations"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+bibliography: references.bib
+csl: nature.csl
+---

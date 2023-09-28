@@ -9,7 +9,7 @@
 <meta name="author" content="Assa Yeroslaviz">
 <meta name="dcterms.date" content="2023-09-28">
 
-<title>Andromeda Start</title>
+<title>Getting started</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Perseus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./andromeda_instructions.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
  <span class="menu-text">Andromeda</span></a>
   </li>  
 </ul>
@@ -138,11 +138,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#documentation-outline" id="toc-documentation-outline" class="nav-link active" data-scroll-target="#documentation-outline"><span class="header-section-number">1</span> Documentation outline</a></li>
+  <li><a href="#raw-files-prior-processing" id="toc-raw-files-prior-processing" class="nav-link active" data-scroll-target="#raw-files-prior-processing"><span class="header-section-number">1</span> Raw files prior processing</a></li>
+  <li><a href="#raw-files-post-processing-with-maxquant" id="toc-raw-files-post-processing-with-maxquant" class="nav-link" data-scroll-target="#raw-files-post-processing-with-maxquant"><span class="header-section-number">2</span> Raw files post processing with MaxQuant</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Andromeda Start</h1>
+<h1 class="title">Getting started</h1>
 </div>
 
 
@@ -179,25 +180,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Andromeda is a peptide search engine based on probabilistic scoring. On proteome data, Andromeda performs as well as Mascot, a widely used commercial search engine, as judged by sensitivity and specificity analysis based on target decoy searches.</p>
-<p>It can handle data with arbitrarily high fragment mass accuracy, it is also able to assign and score complex patterns of post-translational modifications, such as highly phosphorylated peptides, and accommodates extremely large databases. Andromeda can function independently or integrated into MaxQuant. This combination enables analysis of large datasets on a desktop computer. Identification of co-fragmented peptides improves the number of identified peptides.</p>
-<p>To run Andromeda, you will need .NET framework 4.5.</p>
-<section id="documentation-outline" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Documentation outline</h1>
-<p>This documentation is organized as a wiki, so if you find anything that is wrong or hard to understand, please <a href="contact.html">let us know</a>. The wiki can be browsed by using the links below or by searching with the magnifying glass in the upper right corner.</p>
-<ul>
-<li><a href="maxquant_instructions.html">maxquant - Download and installation</a></li>
-<li><a href="andromeda_user-interface.html">Andromeda User Interface</a></li>
-<li><a href="andromeda_configurations.html">Andromeda Configuration:</a></li>
-<li><a href="andromeda_tutorial.html">Andromeda Tutorial</a></li>
-<li><a href="https://groups.google.com/g/maxquant-list?pli=1">Google groups</a></li>
-<li><a href="https://github.com/cox-labs/CoxLab_Bug_Reporting">maxquant Bug reporting</a></li>
-<li><a href="Glossary.html">Glossary</a></li>
-</ul>
-<p>You can find raw file format examples to test Andromeda [[http://andromeda-search.org/AndromedaExample.zip|here]].</p>
-<p>For additional training, consider attending the annual [[https://maxquant.org/summer_school/|MaxQuant Summer School]]. Also watching some [[http://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO 8w|MaxQuant videos]] provides more insight.</p>
-<p>\</p>
-<p>==== Publications ==== Cox, J., Neuhauser, N., Michalski, A., Scheltema, R. A., Olsen, J. V., and Mann, M., [[http://pubs.acs.org/doi/abs/10.1021/pr101065j|Andromeda: A Peptide Search Engine Integrated into the MaxQuant Environment]], //J. Proteome Res.//, 2011, 10, 1794–1805</p>
+<p>The Viewer module can either be used to get some prior information out of loaded raw files or to find some follow up hypotheses after raw files have already been processed.</p>
+<section id="raw-files-prior-processing" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Raw files prior processing</h1>
+<p>To view MS spectra of raw files, load the files using the <code>Load</code> (to load single files) or <code>Load folder</code> (to load a whole folder) options.</p>
+<div id="fig-load-raw-files" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/loadrawfiles_wiki1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Load raw files</figcaption>
+</figure>
+</div>
+</section>
+<section id="raw-files-post-processing-with-maxquant" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Raw files post processing with MaxQuant</h1>
+<p>File organization is important for the correct display of annotated spectra. Raw files should be in the same folder as all index files, the <code>mqpar.xml</code> file and all output folders created by MaxQuant during the processing (that includes the combined folder). The easiest way to load the entire data is to load the <code>mqpar.xml</code> file. Make sure that the file paths are correct if using this option.</p>
+<div id="fig-load-mqpar" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/loadparams_wiki2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Load mqpar.xml</figcaption>
+</figure>
+</div>
 
 
 </section>

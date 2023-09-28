@@ -1,16 +1,19 @@
 ---
 title: "Trouble Shooting"
-author: "AY"
-date: "`r format(Sys.Date())`"
-output:
-  html_document:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-    toc_depth: 4
-    toc_float:
-      collapsed: no
-      smooth_scroll: no
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+execute:
+  eval: true
+bibliography: references.bib
+csl: nature.csl
 ---
 
 **Q:** Cannot load raw files 
@@ -56,3 +59,4 @@ output:
 **Q:** I want to report a bug
 
 **A:** Use our [bugs tracking system](https://github.com/cox-labs/CoxLab_Bug_Reporting)
+

@@ -9,7 +9,7 @@
 <meta name="author" content="Assa Yeroslaviz">
 <meta name="dcterms.date" content="2023-09-28">
 
-<title>Andromeda Start</title>
+<title>MaxQuant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -101,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Perseus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./andromeda_instructions.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
  <span class="menu-text">Andromeda</span></a>
   </li>  
 </ul>
@@ -143,6 +162,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#documentation-outline" id="toc-documentation-outline" class="nav-link active" data-scroll-target="#documentation-outline"><span class="header-section-number">1</span> Documentation outline</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography"><span class="header-section-number">2</span> Bibliography</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Andromeda Start</h1>
+<h1 class="title">MaxQuant</h1>
 </div>
 
 
@@ -179,30 +199,55 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Andromeda is a peptide search engine based on probabilistic scoring. On proteome data, Andromeda performs as well as Mascot, a widely used commercial search engine, as judged by sensitivity and specificity analysis based on target decoy searches.</p>
-<p>It can handle data with arbitrarily high fragment mass accuracy, it is also able to assign and score complex patterns of post-translational modifications, such as highly phosphorylated peptides, and accommodates extremely large databases. Andromeda can function independently or integrated into MaxQuant. This combination enables analysis of large datasets on a desktop computer. Identification of co-fragmented peptides improves the number of identified peptides.</p>
-<p>To run Andromeda, you will need .NET framework 4.5.</p>
+<p>MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine <a href="andromeda_instructions.html">Andromeda</a>, which is integrated into MaxQuant as well as the <a href="viewer_instructions.html">viewer</a> application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the <a href="perseus_instructions.html">Perseus</a> framework.</p>
 <section id="documentation-outline" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Documentation outline</h1>
-<p>This documentation is organized as a wiki, so if you find anything that is wrong or hard to understand, please <a href="contact.html">let us know</a>. The wiki can be browsed by using the links below or by searching with the magnifying glass in the upper right corner.</p>
 <ul>
-<li><a href="maxquant_instructions.html">maxquant - Download and installation</a></li>
-<li><a href="andromeda_user-interface.html">Andromeda User Interface</a></li>
-<li><a href="andromeda_configurations.html">Andromeda Configuration:</a></li>
-<li><a href="andromeda_tutorial.html">Andromeda Tutorial</a></li>
-<li><a href="https://groups.google.com/g/maxquant-list?pli=1">Google groups</a></li>
-<li><a href="https://github.com/cox-labs/CoxLab_Bug_Reporting">maxquant Bug reporting</a></li>
-<li><a href="Glossary.html">Glossary</a></li>
+<li><a href="Download_Installation.html">Download and installation</a></li>
+<li><a href="MQ_FirstSteps.html">First steps in MaxQuant</a></li>
+<li><a href="viewer_instructions.html">Viewer</a></li>
+<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li>[[:maxquant:common:Google groups]]</li>
+<li>[[:maxquant:common:Bug reporting]] &lt;ifauth<span class="citation" data-cites="internal"><sup><a href="#ref-internal" role="doc-biblioref"><strong>internal?</strong></a></sup></span>&gt; These pages are only visible to internal users:</li>
+<li>[[:maxquant:common:internal:Glossary]]</li>
+<li>[[:maxquant:internal:FAQ]]</li>
+<li>[[:maxquant:internal:background]] (how it works under the hood) </li>
 </ul>
-<p>You can find raw file format examples to test Andromeda [[http://andromeda-search.org/AndromedaExample.zip|here]].</p>
-<p>For additional training, consider attending the annual [[https://maxquant.org/summer_school/|MaxQuant Summer School]]. Also watching some [[http://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO 8w|MaxQuant videos]] provides more insight.</p>
-<p>\</p>
-<p>==== Publications ==== Cox, J., Neuhauser, N., Michalski, A., Scheltema, R. A., Olsen, J. V., and Mann, M., [[http://pubs.acs.org/doi/abs/10.1021/pr101065j|Andromeda: A Peptide Search Engine Integrated into the MaxQuant Environment]], //J. Proteome Res.//, 2011, 10, 1794–1805</p>
+<p>For additional training, consider attending the annual <a href="https://maxquant.org/summer_school/">MaxQuant Summer School</a>. Also watching some <a href="https://www.youtube.com/c/MaxQuantChannel">MaxQuant videos</a> provides more insight.</p>
+<hr>
+<p>For question we would love to hear from you under <a href="contact.html">Contact</a></p>
+</section>
+<section id="bibliography" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Bibliography</h1>
+<p>For a deep-dive into the technique and progress behind MaxQuant, many papers of varying degrees of details were published over the last decades. For further reading, you can look at a small list of the more important corner stones of the MaxQuant development history.<span class="citation" data-cites="cox2008"><sup><a href="#ref-cox2008" role="doc-biblioref">1</a></sup></span> (<strong>Note that the paper has a large supplement containing in-depth descriptions of algorithms)</strong>,<span class="citation" data-cites="cox2011"><sup><a href="#ref-cox2011" role="doc-biblioref">2</a></sup></span>,<span class="citation" data-cites="schaab2012"><sup><a href="#ref-schaab2012" role="doc-biblioref">3</a></sup></span>,<span class="citation" data-cites="cox2014"><sup><a href="#ref-cox2014" role="doc-biblioref">4</a></sup></span>,<span class="citation" data-cites="tyanova2015"><sup><a href="#ref-tyanova2015" role="doc-biblioref">5</a></sup></span>,<span class="citation" data-cites="tyanova2016"><sup><a href="#ref-tyanova2016" role="doc-biblioref">6</a></sup></span> (<strong>Note that this paper explains how to run MaxQuant in detail.</strong>),<span class="citation" data-cites="sinitcyn2018"><sup><a href="#ref-sinitcyn2018" role="doc-biblioref">7</a></sup></span></p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
+<div id="ref-cox2008" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Cox, J. &amp; Mann, M. <a href="https://doi.org/10.1038/nbt.1511">MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification</a>. <em>Nature Biotechnology</em> <strong>26</strong>, 1367–1372 (2008).</div>
+</div>
+<div id="ref-cox2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Cox, J., Michalski, A. &amp; Mann, M. <a href="https://doi.org/10.1007/s13361-011-0142-8">Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors</a>. <em>Journal of the American Society for Mass Spectrometry</em> <strong>22</strong>, 1373–1380 (2011).</div>
+</div>
+<div id="ref-schaab2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Schaab, C., Geiger, T., Stoehr, G., Cox, J. &amp; Mann, M. <a href="https://doi.org/10.1074/mcp.m111.014068">Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database</a>. <em>Molecular &amp; Cellular Proteomics</em> <strong>11</strong>, M111.014068 (2012).</div>
+</div>
+<div id="ref-cox2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Cox, J. <em>et al.</em> <a href="https://doi.org/10.1074/mcp.m113.031591">Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ</a>. <em>Molecular &amp; Cellular Proteomics</em> <strong>13</strong>, 2513–2526 (2014).</div>
+</div>
+<div id="ref-tyanova2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Tyanova, S. <em>et al.</em> <a href="https://doi.org/10.1002/pmic.201400449">Visualization of LC<span>-</span>MS/MS proteomics data in MaxQuant</a>. <em>PROTEOMICS</em> <strong>15</strong>, 1453–1456 (2015).</div>
+</div>
+<div id="ref-tyanova2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Tyanova, S., Temu, T. &amp; Cox, J. <a href="https://doi.org/10.1038/nprot.2016.136">The MaxQuant computational platform for mass spectrometry-based shotgun proteomics</a>. <em>Nature Protocols</em> <strong>11</strong>, 2301–2319 (2016).</div>
+</div>
+<div id="ref-sinitcyn2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Sinitcyn, P. <em>et al.</em> <a href="https://doi.org/10.1038/s41592-018-0018-y">MaxQuant goes Linux</a>. <em>Nature Methods</em> <strong>15</strong>, 401–401 (2018).</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
