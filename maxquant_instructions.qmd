@@ -22,11 +22,9 @@ MaxQuant is a proteomics software package designed for analyzing large mass-spec
 -   [First steps in MaxQuant](MQ_FirstSteps.html)
 -   [Viewer](viewer_instructions.html)
 -   [Andromeda](andromeda_instructions.html)
--   \[\[:maxquant:common:Google groups\]\]
--   \[\[:maxquant:common:Bug reporting\]\] \<ifauth @internal\> These pages are only visible to internal users:
--   \[\[:maxquant:common:internal:Glossary\]\]
--   \[\[:maxquant:internal:FAQ\]\]
--   \[\[:maxquant:internal:background\]\] (how it works under the hood) </ifauth>
+-   [Google groups](https://groups.google.com/g/maxquant-list?pli=1)
+-   [maxquant Bug reporting](https://github.com/cox-labs/CoxLab_Bug_Reporting)
+-   [Glossary](docs/Glossary.html)
 
 For additional training, consider attending the annual [MaxQuant Summer School](https://maxquant.org/summer_school/). Also watching some [MaxQuant videos](https://www.youtube.com/c/MaxQuantChannel) provides more insight.
 
