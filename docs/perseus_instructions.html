@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -138,7 +157,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learn" id="toc-learn" class="nav-link active" data-scroll-target="#learn"><span class="header-section-number">1</span> Learn</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download"><span class="header-section-number">2</span> Download</a></li>
+  <li><a href="#cite" id="toc-cite" class="nav-link" data-scroll-target="#cite"><span class="header-section-number">3</span> Cite</a></li>
+  <li><a href="#report-a-bug" id="toc-report-a-bug" class="nav-link" data-scroll-target="#report-a-bug"><span class="header-section-number">4</span> Report a bug</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -173,11 +201,63 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>test this page</p>
+<p>The Perseus software platform supports biological and biomedical researchers in interpreting protein quantification, interaction and post-translational modification data. Perseus contains a comprehensive portfolio of statistical tools for high-dimensional omics data analysis covering normalization, pattern recognition, time-series analysis, cross-omics comparisons and multiple-hypothesis testing (for an overview see <a href="#fig-perseus" class="quarto-xref">Figure&nbsp;1</a>). A machine learning module supports the classification and validation of patient groups for diagnosis and prognosis, and it also detects predictive protein signatures. Central to Perseus is a user-friendly, interactive workflow environment that provides complete documentation of computational methods used in a publication<span class="citation" data-cites="tyanova2016">(<a href="#ref-tyanova2016" role="doc-biblioref">Tyanova, Temu, and Cox 2016</a>)</span>.</p>
+<div id="fig-perseus" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/perseus_figure1.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Perseus overview</figcaption>
+</figure>
+</div>
+<section id="learn" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="learn"><span class="header-section-number">1</span> Learn</h2>
+<ul>
+<li>Hands-on tutorials and theoretical lectures are available on the <a href="https://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO8w">MaxQuant youtube channel</a>.</li>
+<li>Participate in our annual <a href="http://summerschool.maxquant.de">MaxQuant summer school</a> to gain even deeper insights into MaxQuant and Perseus. Read the protocol-style book chapter (<span class="citation" data-cites="tyanova2018">(<a href="#ref-tyanova2018" role="doc-biblioref">Tyanova and Cox 2018</a>)</span> on Perseus.</li>
+<li>Join the discussion around Perseus and data analysis on the <a href="https://groups.google.com/g/perseus-list">perseus google group</a> – a great place to ask any question and get answers from the community.</li>
+</ul>
+</section>
+<section id="download" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="download"><span class="header-section-number">2</span> Download</h2>
+<p>Perseus is freely available to commercial and academic users, just follow the <a href="perseus_download_guide.html">download and installation guide</a></p>
+</section>
+<section id="cite" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="cite"><span class="header-section-number">3</span> Cite</h2>
+<p>If you use Perseus in your project, please cite one of the papers listed below:</p>
+<ul>
+<li><p>The Perseus computational platform for comprehensive analysis of (prote)omics data <span class="citation" data-cites="tyanova2016_1">(<a href="#ref-tyanova2016_1" role="doc-biblioref">Tyanova, Temu, et al. 2016</a>)</span></p></li>
+<li><p>A network module for the Perseus software for computational proteomics facilitates proteome interaction graph analysis <span class="citation" data-cites="rudolph2019">(<a href="#ref-rudolph2019" role="doc-biblioref">Rudolph and Cox 2019</a>)</span></p></li>
+<li><p>Proteomic maps of breast cancer subtypes <span class="citation" data-cites="tyanova2016a">(<a href="#ref-tyanova2016a" role="doc-biblioref">Tyanova, Albrechtsen, et al. 2016</a>)</span></p></li>
+<li><p>1D and 2D annotation enrichment: a statistical method integrating quantitative proteomics with complementary high-throughput data <span class="citation" data-cites="cox2012">(<a href="#ref-cox2012" role="doc-biblioref">Cox and Mann 2012</a>)</span></p></li>
+</ul>
+</section>
+<section id="report-a-bug" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="report-a-bug"><span class="header-section-number">4</span> Report a bug</h2>
+<p>For question we would love to hear from you under <a href="contact.html">Contact</a></p>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cox2012" class="csl-entry" role="listitem">
+Cox, Juergen, and Matthias Mann. 2012. <span>“1D and 2D Annotation Enrichment: A Statistical Method Integrating Quantitative Proteomics with Complementary High-Throughput Data.”</span> <em>BMC Bioinformatics</em> 13 (S16). <a href="https://doi.org/10.1186/1471-2105-13-s16-s12">https://doi.org/10.1186/1471-2105-13-s16-s12</a>.
+</div>
+<div id="ref-rudolph2019" class="csl-entry" role="listitem">
+Rudolph, Jan Daniel, and Jürgen Cox. 2019. <span>“A Network Module for the Perseus Software for Computational Proteomics Facilitates Proteome Interaction Graph Analysis.”</span> <em>Journal of Proteome Research</em> 18 (5): 2052–64. <a href="https://doi.org/10.1021/acs.jproteome.8b00927">https://doi.org/10.1021/acs.jproteome.8b00927</a>.
+</div>
+<div id="ref-tyanova2016a" class="csl-entry" role="listitem">
+Tyanova, Stefka, Reidar Albrechtsen, Pauliina Kronqvist, Juergen Cox, Matthias Mann, and Tamar Geiger. 2016. <span>“Proteomic Maps of Breast Cancer Subtypes.”</span> <em>Nature Communications</em> 7 (1). <a href="https://doi.org/10.1038/ncomms10259">https://doi.org/10.1038/ncomms10259</a>.
+</div>
+<div id="ref-tyanova2018" class="csl-entry" role="listitem">
+Tyanova, Stefka, and Juergen Cox. 2018. <span>“Perseus: A Bioinformatics Platform for Integrative Analysis of Proteomics Data in Cancer Research.”</span> In, 133–48. Springer New York. <a href="https://doi.org/10.1007/978-1-4939-7493-1_7">https://doi.org/10.1007/978-1-4939-7493-1_7</a>.
+</div>
+<div id="ref-tyanova2016" class="csl-entry" role="listitem">
+Tyanova, Stefka, Tikira Temu, and Juergen Cox. 2016. <span>“The MaxQuant Computational Platform for Mass Spectrometry-Based Shotgun Proteomics.”</span> <em>Nature Protocols</em> 11 (12): 2301–19. <a href="https://doi.org/10.1038/nprot.2016.136">https://doi.org/10.1038/nprot.2016.136</a>.
+</div>
+<div id="ref-tyanova2016_1" class="csl-entry" role="listitem">
+Tyanova, Stefka, Tikira Temu, Pavel Sinitcyn, Arthur Carlson, Marco Y Hein, Tamar Geiger, Matthias Mann, and Jürgen Cox. 2016. <span>“The Perseus Computational Platform for Comprehensive Analysis of (Prote)omics Data.”</span> <em>Nature Methods</em> 13 (9): 731–40. <a href="https://doi.org/10.1038/nmeth.3901">https://doi.org/10.1038/nmeth.3901</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
