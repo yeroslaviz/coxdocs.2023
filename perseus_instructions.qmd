@@ -12,6 +12,11 @@ editor: visual
 date: today
 ---
 
-
 test this page
+
+
+```{r}
+library(rmarkdown)
+library(glossary)
+```
 
