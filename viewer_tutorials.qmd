@@ -1,5 +1,5 @@
 ---
-title: "Viewer Tutorials"
+title: "Viewer - Tutorials"
 author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
 format: 
   html:
@@ -40,7 +40,7 @@ From our online MaxQunat SummerSchool in 2021.
 
 {{< video https://youtu.be/qwAxgDEpo6c?si=xpnt5pwc4_3aUI6- >}}
 
-**MaxQuant Viewer **
+**MaxQuant Viewer**
 
 From our 2019 MaxQunat Summer School in Madison
 
