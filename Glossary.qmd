@@ -10,10 +10,6 @@ format:
     number-depth: 4
     code-fold: true
     strip-comments: true
-    from: 'markdown-markdown_in_html_blocks'
-filters:
-  - parse-latex
-  - code-visibility
 editor: visual
 date: today
 execute:
@@ -147,10 +143,10 @@ glossary_table() # show table as kable
 
 ===== Z =====
 
-----
+------------------------------------------------------------------------
 
 We welcome suggestions for additional entries to this glossary, or corrections to existing entries. For technical reasons, we have not made this page editable by users. Please use the following [contact](contact.html) possibilities instead.
 
+------------------------------------------------------------------------
 
-----
 The glossary was created using the [glossary](https://debruine.github.io/glossary/) package[@glossary]
