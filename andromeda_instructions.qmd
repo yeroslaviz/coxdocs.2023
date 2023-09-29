@@ -1,5 +1,5 @@
 ---
-title: "Andromeda Start"
+title: "Andromeda - Start"
 author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
 format: 
   html:
@@ -28,7 +28,7 @@ This documentation is organized as a wiki, so if you find anything that is wrong
 
   * [maxquant - Download and installation](maxquant_instructions.html)
   * [Andromeda User Interface](andromeda_user-interface.html)
-  * [Andromeda Configuration:](andromeda_configurations.html)
+  * [Andromeda Configuration:](andromeda_configurations.html) <========!!!!!
   * [Andromeda Tutorial](andromeda_tutorial.html)
   * [Google groups](https://groups.google.com/g/maxquant-list?pli=1)
   * [maxquant Bug reporting](https://github.com/cox-labs/CoxLab_Bug_Reporting)

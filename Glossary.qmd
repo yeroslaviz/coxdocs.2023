@@ -25,7 +25,6 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-
 ```{r}
 # install.packages("devtools")
 #install.packages("glossary")
@@ -49,11 +48,12 @@ library(glossary)
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("FDR", def = "False Discovery Rate", path = NULL)
-glossary("FTICR", def = "Fourier transform ion cyclotron resonance mass spectrometry", path = NULL)
+i <- glossary("FDR", def = "False Discovery Rate", path = NULL)
+i <- glossary("FTICR", def = "Fourier transform ion cyclotron resonance mass spectrometry", path = NULL)
 
 glossary_table() # show table as kable
 ```
+
 ===== G =====
 
 ===== H =====
@@ -63,9 +63,9 @@ glossary_table() # show table as kable
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("iBAQ", def = "Intensity Based Absolute Quantification", path = NULL)
-glossary("ICAT", def = "Isotope-coded affinity tag", path = NULL)
-glossary("iTRAQ", def = "Isobaric tag for relative and absolute quantitation", path = NULL)
+i <- glossary("iBAQ", def = "Intensity Based Absolute Quantification", path = NULL)
+i <- glossary("ICAT", def = "Isotope-coded affinity tag", path = NULL)
+i <- glossary("iTRAQ", def = "Isobaric tag for relative and absolute quantitation", path = NULL)
 
 glossary_table() # show table as kable
 ```
@@ -79,19 +79,17 @@ glossary_table() # show table as kable
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("LFQ", def = "Label-free quantification", path = NULL)
+i <- glossary("LFQ", def = "Label-free quantification", path = NULL)
 
 glossary_table() # show table as kable
 ```
-
-??  ::  !!
 
 ===== M =====
 
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("MALDI", def = "Matrix-assisted laser desorption/ionization", path = NULL)
+i <- glossary("MALDI", def = "Matrix-assisted laser desorption/ionization", path = NULL)
 
 glossary_table() # show table as kable
 ```
@@ -105,8 +103,8 @@ glossary_table() # show table as kable
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("PAGE", def = "Polyacrylamide gel electrophoresis", path = NULL)
-glossary("PEP", def = "Posterior Error Probability", path = NULL)
+i <- glossary("PAGE", def = "Polyacrylamide gel electrophoresis", path = NULL)
+i <- glossary("PEP", def = "Posterior Error Probability", path = NULL)
 
 glossary_table() # show table as kable
 ```
@@ -120,9 +118,9 @@ glossary_table() # show table as kable
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("SDS", def = "sodium dodecyl sulfate", path = NULL)
-glossary("SILAC", def = "stable isotope labeling by/with amino acids in cell culture", path = NULL)
-glossary("SWIFT", def = "Stored waveform inverse Fourier transform", path = NULL)
+i <- glossary("SDS", def = "sodium dodecyl sulfate", path = NULL)
+i <- glossary("SILAC", def = "stable isotope labeling by/with amino acids in cell culture", path = NULL)
+i <- glossary("SWIFT", def = "Stored waveform inverse Fourier transform", path = NULL)
 
 glossary_table() # show table as kable
 ```
@@ -132,7 +130,7 @@ glossary_table() # show table as kable
 ```{r}
 glossary_reset()
 # add a definition to the table
-glossary("TMT", def = "Tandem mass tag", path = NULL)
+i <- glossary("TMT", def = "Tandem mass tag", path = NULL)
 
 glossary_table() # show table as kable
 ```
@@ -149,10 +147,10 @@ glossary_table() # show table as kable
 
 ===== Z =====
 
-------------------------------------------------------------------------
+----
 
-We welcome suggestions for additional entries to this glossary, or corrections to existing entries. For technical reasons, we have not made this page editable by users. Please use the following contact form instead.
+We welcome suggestions for additional entries to this glossary, or corrections to existing entries. For technical reasons, we have not made this page editable by users. Please use the following [contact](contact.html) possibilities instead.
 
-{{contact\>\|subj=Contact from Glossary Page}}
 
+----
 The glossary was created using the [glossary](https://debruine.github.io/glossary/) package[@glossary]

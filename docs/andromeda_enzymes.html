@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Assa Yeroslaviz">
-<meta name="dcterms.date" content="2023-09-28">
+<meta name="dcterms.date" content="2023-09-29">
 
-<title>MaxQuant</title>
+<title>Andromeda Enzymes - the proteases table</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -161,8 +142,12 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#documentation-outline" id="toc-documentation-outline" class="nav-link active" data-scroll-target="#documentation-outline"><span class="header-section-number">1</span> Documentation outline</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography"><span class="header-section-number">2</span> Bibliography</a></li>
+  <li><a href="#configure-the-proteases-table" id="toc-configure-the-proteases-table" class="nav-link active" data-scroll-target="#configure-the-proteases-table"><span class="header-section-number">1</span> Configure the proteases table</a>
+  <ul>
+  <li><a href="#open-the-proteases-table" id="toc-open-the-proteases-table" class="nav-link" data-scroll-target="#open-the-proteases-table"><span class="header-section-number">1.1</span> Open the proteases table</a></li>
+  <li><a href="#viewing-examples" id="toc-viewing-examples" class="nav-link" data-scroll-target="#viewing-examples"><span class="header-section-number">1.2</span> Viewing examples</a></li>
+  <li><a href="#adding-a-new-protease" id="toc-adding-a-new-protease" class="nav-link" data-scroll-target="#adding-a-new-protease"><span class="header-section-number">1.3</span> Adding a new protease</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -171,7 +156,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MaxQuant</h1>
+<h1 class="title">Andromeda Enzymes - the proteases table</h1>
 </div>
 
 
@@ -188,7 +173,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 28, 2023</p>
+      <p class="date">September 29, 2023</p>
     </div>
   </div>
   
@@ -199,55 +184,61 @@ div.csl-indent {
 
 </header>
 
-<p>MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine <a href="andromeda_instructions.html">Andromeda</a>, which is integrated into MaxQuant as well as the <a href="viewer_instructions.html">viewer</a> application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the <a href="perseus_instructions.html">Perseus</a> framework.</p>
-<section id="documentation-outline" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Documentation outline</h1>
-<ul>
-<li><a href="Download_Installation.html">Download and installation</a></li>
-<li><a href="MQ_FirstSteps.html">First steps in MaxQuant</a></li>
-<li><a href="viewer_instructions.html">Viewer</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
-<li>[[:maxquant:common:Google groups]]</li>
-<li>[[:maxquant:common:Bug reporting]] &lt;ifauth<span class="citation" data-cites="internal"><sup><a href="#ref-internal" role="doc-biblioref"><strong>internal?</strong></a></sup></span>&gt; These pages are only visible to internal users:</li>
-<li>[[:maxquant:common:internal:Glossary]]</li>
-<li>[[:maxquant:internal:FAQ]]</li>
-<li>[[:maxquant:internal:background]] (how it works under the hood) </li>
-</ul>
-<p>For additional training, consider attending the annual <a href="https://maxquant.org/summer_school/">MaxQuant Summer School</a>. Also watching some <a href="https://www.youtube.com/c/MaxQuantChannel">MaxQuant videos</a> provides more insight.</p>
-<hr>
-<p>For question we would love to hear from you under <a href="contact.html">Contact</a></p>
+<section id="configure-the-proteases-table" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Configure the proteases table</h1>
+<p>For the here shown step by step description Andromeda was used within MaxQuant (version 1.5.3.8).</p>
+<section id="open-the-proteases-table" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="open-the-proteases-table"><span class="header-section-number">1.1</span> Open the proteases table</h2>
+<p>Open MaxQuant and go to the Andromeda configuration tab. There select the Data type “Proteases” (s. <a href="#fig-add-prote" class="quarto-xref">Figure&nbsp;1</a>).</p>
+<div id="fig-add-prote" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/configproteases-01-open_tab-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Adding new Proteases</figcaption>
+</figure>
+</div>
 </section>
-<section id="bibliography" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Bibliography</h1>
-<p>For a deep-dive into the technique and progress behind MaxQuant, many papers of varying degrees of details were published over the last decades. For further reading, you can look at a small list of the more important corner stones of the MaxQuant development history.<span class="citation" data-cites="cox2008"><sup><a href="#ref-cox2008" role="doc-biblioref">1</a></sup></span> (<strong>Note that the paper has a large supplement containing in-depth descriptions of algorithms)</strong>,<span class="citation" data-cites="cox2011"><sup><a href="#ref-cox2011" role="doc-biblioref">2</a></sup></span>,<span class="citation" data-cites="schaab2012"><sup><a href="#ref-schaab2012" role="doc-biblioref">3</a></sup></span>,<span class="citation" data-cites="cox2014"><sup><a href="#ref-cox2014" role="doc-biblioref">4</a></sup></span>,<span class="citation" data-cites="tyanova2015"><sup><a href="#ref-tyanova2015" role="doc-biblioref">5</a></sup></span>,<span class="citation" data-cites="tyanova2016"><sup><a href="#ref-tyanova2016" role="doc-biblioref">6</a></sup></span> (<strong>Note that this paper explains how to run MaxQuant in detail.</strong>),<span class="citation" data-cites="sinitcyn2018"><sup><a href="#ref-sinitcyn2018" role="doc-biblioref">7</a></sup></span></p>
-
+<section id="viewing-examples" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="viewing-examples"><span class="header-section-number">1.2</span> Viewing examples</h2>
+<p>In most studies samples are digested using Trypsin. In the “Proteases” table you will find two different definitions for Trypsin. The first definition cleaves at the carboxyl side of the amino acids lysine or arginine, except when either is followed by proline (see Description on the right hand side of the Andromeda window). That’s the classical definition. Additional comments in <a href="#fig-view-trypsin" class="quarto-xref">Figure&nbsp;2</a> are in black and blue.</p>
+<div id="fig-view-trypsin" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/configproteases-02-viewing_trypsin-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: An example of added Trypsin protease to the table</figcaption>
+</figure>
+</div>
+<p>However the commonly used definition is “Trypsin/P”, which also cleaves at carboxyl side of the amino acids lysine or arginine, also if a proline follows (highlighted in red in <a href="#fig-trypsinP" class="quarto-xref">Figure&nbsp;3</a>). Additional comments in <a href="#fig-trypsinP" class="quarto-xref">Figure&nbsp;3</a> are in black and blue.</p>
+<div id="fig-trypsinP" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/configproteases-02-viewing_trypsin-p-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: TrypsinP cleaves at the carboxyl side of the AA</figcaption>
+</figure>
+</div>
+</section>
+<section id="adding-a-new-protease" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="adding-a-new-protease"><span class="header-section-number">1.3</span> Adding a new protease</h2>
+<p>Let’s assume Chymotrypsin is not yet provided in Andromeda and we want to add it. From the literature we know Chymotrypsin cleaves c-terminal after Phenylalanine (F), Tryptophan (W) and Tyrosine (Y).</p>
+<p>First click the “Add” button as shown in <a href="#fig-chymotrypsin" class="quarto-xref">Figure&nbsp;4</a>. Then a new row will be added at the end of the table and a new protease form will appear on the right hand side that can be edited.</p>
+<div id="fig-chymotrypsin" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/configproteases-03-adding_form-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Adding Chymotrypsin</figcaption>
+</figure>
+</div>
+<p>Then you just have to fill in the form by defining a name, a description and the specificity. Don’t forget to click the “Modify table” button when your done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the “Save changes” button. Additional comments on the screenshot are in black and blue in <a href="#fig-save-chymotrypsin" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<p>To have the added modification available in MaxQuant you have to open a new MaxQuant window.</p>
+<div id="fig-save-chymotrypsin" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/configproteases-04-adding_filled_in_params-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: save added protease</figcaption>
+</figure>
+</div>
+<p><strong>Comment:</strong> Note that you also can do completely unspecific searches in MaxQuant. For this no definition of an enzyme is necessary.</p>
 
 
 </section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
-<div id="ref-cox2008" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Cox, J. &amp; Mann, M. <a href="https://doi.org/10.1038/nbt.1511">MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification</a>. <em>Nature Biotechnology</em> <strong>26</strong>, 1367–1372 (2008).</div>
-</div>
-<div id="ref-cox2011" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Cox, J., Michalski, A. &amp; Mann, M. <a href="https://doi.org/10.1007/s13361-011-0142-8">Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors</a>. <em>Journal of the American Society for Mass Spectrometry</em> <strong>22</strong>, 1373–1380 (2011).</div>
-</div>
-<div id="ref-schaab2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Schaab, C., Geiger, T., Stoehr, G., Cox, J. &amp; Mann, M. <a href="https://doi.org/10.1074/mcp.m111.014068">Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database</a>. <em>Molecular &amp; Cellular Proteomics</em> <strong>11</strong>, M111.014068 (2012).</div>
-</div>
-<div id="ref-cox2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Cox, J. <em>et al.</em> <a href="https://doi.org/10.1074/mcp.m113.031591">Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ</a>. <em>Molecular &amp; Cellular Proteomics</em> <strong>13</strong>, 2513–2526 (2014).</div>
-</div>
-<div id="ref-tyanova2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Tyanova, S. <em>et al.</em> <a href="https://doi.org/10.1002/pmic.201400449">Visualization of LC<span>-</span>MS/MS proteomics data in MaxQuant</a>. <em>PROTEOMICS</em> <strong>15</strong>, 1453–1456 (2015).</div>
-</div>
-<div id="ref-tyanova2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Tyanova, S., Temu, T. &amp; Cox, J. <a href="https://doi.org/10.1038/nprot.2016.136">The MaxQuant computational platform for mass spectrometry-based shotgun proteomics</a>. <em>Nature Protocols</em> <strong>11</strong>, 2301–2319 (2016).</div>
-</div>
-<div id="ref-sinitcyn2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Sinitcyn, P. <em>et al.</em> <a href="https://doi.org/10.1038/s41592-018-0018-y">MaxQuant goes Linux</a>. <em>Nature Methods</em> <strong>15</strong>, 401–401 (2018).</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

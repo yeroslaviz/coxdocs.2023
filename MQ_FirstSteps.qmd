@@ -14,7 +14,7 @@ execute:
   eval: true
 ---
 
-_The descriptions and screenshots in this tutorial refer to the MaxQuant GUI around version 1.4.3.14 from August 2014._
+*The descriptions and screenshots in this tutorial refer to the MaxQuant GUI around version 1.4.3.14 from August 2014.*
 
 In case you are a first time user, you might be worried by the many options and parameters that one can set in the user interface. If this is the case, we have good news for you. In almost all user cases the standard values of most parameters are fine and you only need to adjust a small number of factors. Typically there is only little information that you need to provide. Every parameter in the interface has context help which you obtain by hovering with the mouse pointer over the text string for this parameter. This documentation also has that information, and more.
 
@@ -33,10 +33,10 @@ The second tab is **Group-specific parameters**. You need to go there to specify
 ![Group-specific parameters](Figures/labels.png){#fig-load-labels}
 
 ## Enzymes
+
 Also under the **Group-specific parameters** tab, you should enter the `Enzyme(s)` (one or more) with which you have digested your proteins. They can be moved from the list at the left and back with the arrow buttons, and the order changed with the "t" (to top), "u" (up one place), "d" (down one place), and "b" (to bottom) buttons. In this example (s. @fig-enzymes), we used Trypsin/P.
 
 ![Enzymes](Figures/digestion.png){#fig-enzymes}
-
 
 ## Load FASTA file
 
@@ -46,7 +46,7 @@ Finally you will need to go to the third tab (s. @fig-fasta), "Global parameters
 
 ## Start the Analysis
 
-After you press the **Start** button, you can monitor the progress of the analysis under the fourth tab, **Performance**. A popup window saying ‘Done’ will appear when MaxQuant is finished. All result files will appear in the folder `…\combined\txt` as tab-delimited text files. A pdf document with a description of all columns in all tables will be written to `…\combined\txt\tables.pdf`.
+After you press the **Start** button, you can monitor the progress of the analysis under the fourth tab, **Performance**. A popup window saying 'Done' will appear when MaxQuant is finished. All result files will appear in the folder `…\combined\txt` as tab-delimited text files. A pdf document with a description of all columns in all tables will be written to `…\combined\txt\tables.pdf`.
 
 The fifth tab is the **Viewer**, used to examine the results of the analysis, which will be the topic of the [viewer tutorial](viewer_tutorials.html). All columns have interactive descriptions in the Viewer program. Just move the mouse over the beginning of the column title and click on the question mark that will appear.
 
@@ -54,5 +54,6 @@ The sixth and final tab is **Andromeda configuration**. Andromeda is the peptide
 
 That's how easy it can be!
 
-----
+------------------------------------------------------------------------
+
 For question or problems with the running MqxQuant we would love to hear from you under [Contact](contact.html).

@@ -18,7 +18,7 @@ execute:
 
 Downloading and using the software is free of charge.
 
-Simply download from [here](https://maxquant.org/) and unpack the compressed file //MaxQuant.zip//.
+Simply download from [here](https://maxquant.org/) and unpack the compressed file `MaxQuant.zip`.
 
 # Running
 
