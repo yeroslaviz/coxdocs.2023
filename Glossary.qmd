@@ -13,7 +13,7 @@ format:
 editor: visual
 date: today
 execute:
-  eval: false
+  eval: true
   echo: false
   message: false
   error: false
