@@ -15,7 +15,6 @@ date: today
 
 ----
 
-
 Welcome to coxdocs.org, the home of the documentation for
 
 * [MaxQuant](maxquant_instructions.html)
