@@ -25,7 +25,9 @@ website:
       - icon: fa-linkedin fa-lg
         url: https://www.linkedin.com/in/juergen-cox-2437ba17/
   page-footer: 
-    center: "© 2023, created by and maintained by Cox lab" 
+    left: "© 2023, created by and maintained by [Cox lab](https://www.biochem.mpg.de/cox/) "
+    right:   "Powered by [Quarto](https://quarto.org/) (v. <?quarto.version?>)"
+    
 
 format:
   html:
@@ -33,4 +35,5 @@ format:
     css: styles.css
     toc: true
 
-    
+filters:
+  - quarto-version.lua    
